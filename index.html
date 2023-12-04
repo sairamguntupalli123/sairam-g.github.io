@@ -1,77 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Fruit Shop</title>
+    <title>Fruit Market</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header {
-    background-color: #4CAF50;
-    padding: 1em;
-}
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+        nav {
+            background-color: #555;
+            padding: 1em;
+        }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+        }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+        section {
+            padding: 2em;
+        }
 
-section.main-content {
-    /* Styling for the main content section */
-}
+        .fruit-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 1em;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 200px;
+        }
 
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+        #fruit-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
+        .search-bar {
+            margin-bottom: 1em;
+        }
+
+        .filter-btn {
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #login-form,
+        #signup-form {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Signup</a></li>
-            </ul>
-        </nav>
+        <h1>Fruit Market</h1>
     </header>
 
-    <section class="main-content">
-        <!-- Background images, text descriptions, buttons, videos, images, etc. go here -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Fruits</a>
+        <a href="#">Contact</a>
+        <a href="#" onclick="showLoginForm()">Login</a>
+        <a href="#" onclick="showSignupForm()">Sign Up</a>
+    </nav>
+
+    <section>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search fruits...">
+            <button class="filter-btn" onclick="filterFruits()">Search</button>
+        </div>
+
+        <div id="fruit-list">
+            <!-- Fruits will be dynamically added here -->
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Fruit Shop</p>
+        <p>&copy; 2023 Fruit Market</p>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="login-form">
+        <!-- Login form content -->
+    </div>
+
+    <div id="signup-form">
+        <!-- Signup form content -->
+    </div>
+
+    <script>
+        function showLoginForm() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('signup-form').style.display = 'none';
+        }
+
+        function showSignupForm() {
+            document.getElementById('signup-form').style.display = 'block';
+            document.getElementById('login-form').style.display = 'none';
+        }
+
+        function filterFruits() {
+            // Implement filtering logic based on search input
+            // Update the #fruit-list section with filtered fruits
+        }
+    </script>
 </body>
+
 </html>
