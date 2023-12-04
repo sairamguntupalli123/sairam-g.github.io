@@ -1,125 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Delicious Bakery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fruit Shop</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-    
-        nav {
-            background-color: #ffeecc;
-            padding: 10px;
-        }
-    
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-    
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-    
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-        }
-    
-        header {
-            background-image: url('');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-    
-        /* Style other sections similarly */
-    
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section.main-content {
+    /* Styling for the main content section */
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
     </style>
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header Section with Background Image -->
     <header>
-        <div class="header-content">
-            <h1>Welcome to Delicious Bakery</h1>
-            <p>Indulge in our fresh, homemade delights!</p>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Welcome to Delicious Bakery! We are passionate about baking and creating delicious treats for our
-                customers.</p>
-            <p>Our commitment is to use only the finest ingredients to ensure the highest quality in every product we
-                bake.</p>
-            <button>Learn More</button>
-        </div>
+    <section class="main-content">
+        <!-- Background images, text descriptions, buttons, videos, images, etc. go here -->
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu">
-        <div class="menu-content">
-            <h2>Our Menu</h2>
-            <div class="menu-item">
-                <img src="" height="100" width="100" alt="Cupcake">
-                <h3>Cupcakes</h3>
-                <p>Delicious cupcakes in various flavors!</p>
-                <button>View Details</button>
-            </div>
-            <!-- More menu items can be added similarly -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-content">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Delicious Bakery. All Rights Reserved.</p>
+        <p>&copy; 2023 Fruit Shop</p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
